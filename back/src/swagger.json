@@ -1,0 +1,120 @@
+{
+    "openapi": "3.0.0",
+
+    "info":{
+        "title": "API do Banco de Currículos da JobsNet",
+        "description": "API do banco de currículos da JobsNet, solicitado como desafio da Gama Academy",
+        "version": "1.0.0"
+    },
+
+    "servers": [
+        {
+            "url":"http://localhost:3000",
+            "description": "Ambiente de desenvolvimento"
+        }
+    ],
+
+    "paths": {
+        "/register":{
+            "post": {
+                "summary": "Banco de currículos",
+                "description": "Rota de cadastro de usuários, recebe: nome, cargo, data de nascimento, estado civil, gênero, email, telefone, celular, rua, número, bairro, complemento, cidade, estado, cep, rg, cpf, habilitação e veículo",
+                "tags": [
+                    "Usuário"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nome":{
+                                        "type": "string"
+                                    },
+                                    "cargo":{
+                                        "type": "string"
+                                    },
+                                    "dataDeNascimento":{
+                                        "type": "number"
+                                    },
+                                    "estadoCivil":{
+                                        "type": "string"
+                                    },
+                                    "genero":{
+                                        "type": "string"
+                                    },
+                                    "email":{
+                                        "type": "string"
+                                    },
+                                    "telefone":{
+                                        "type": "number"
+                                    },
+                                    "celular":{
+                                        "type": "number"
+                                    },
+                                    "rua":{
+                                        "type": "string"
+                                    },
+                                    "numero":{
+                                        "type": "number"
+                                    },
+                                    "bairro":{
+                                        "type": "string"
+                                    },
+                                    "complemento":{
+                                        "type": "string"
+                                    },
+                                    "cidade":{
+                                        "type": "string"
+                                    },
+                                    "estado":{
+                                        "type": "string"
+                                    },
+                                    "cep":{
+                                        "type": "number"
+                                    },
+                                    "rg":{
+                                        "type": "number"
+                                    },
+                                    "cpf":{
+                                        "type": "number"
+                                    },
+                                    "habilitacao":{
+                                        "type": "string"
+                                    },
+                                    "veiculo":{
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Meu cadastro":{
+                                    "value":{
+                                        "nome": "Geovanna Carolline do Carmo Siqueira",
+                                        "cargo": "desenvolvedora web",
+                                        "dataDeNascimento": "24061999",
+                                        "estadoCivil": "solteiro(a)",
+                                        "genero": "feminino",
+                                        "email": "geovanna.carolline.gcs@gmail.com",
+                                        "telefone": "0000000000",
+                                        "celular": "000000000000",
+                                        "rua":"rua assis",
+                                        "numero": "123",
+                                        "bairro": "jardim azul",
+                                        "complemento": "casa dos fundos",
+                                        "cidade": "Cuiabá",
+                                        "estado": "MS",
+                                        "cep":"79000000",
+                                        "rg": "0000000",
+                                        "cpf":"00000000000",
+                                        "habilitacao": "A",
+                                        "veiculo": "Não"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
