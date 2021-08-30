@@ -117,8 +117,8 @@ const FormGama = () => {
         habilitacao: document.getElementById('habilitacao').value,
         veiculo: document.getElementById('veiculo').value
     };
-    console.log(form);
-    return form
+    console.log(FormGama);
+    return FormGama;
 }
 const criarUsuario = async (User) => {
 
