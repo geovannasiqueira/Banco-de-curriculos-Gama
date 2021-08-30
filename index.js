@@ -13,6 +13,7 @@ mongoose.connect('mongodb+srv://geovannasiqueira:Mcamila01B@cluster0.oj8rw.mongo
    // useCreateIndex: true
 });
 
+app.use(express.static('public'));
 app.use(cors());
 app.use(express.json());
 app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));

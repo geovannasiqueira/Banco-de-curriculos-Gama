@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de curriculos JobsNet</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./img/logo.png" alt="Logo JobsNet">
+        </div>
+        <div>
+            <a href="http://jobsnet.com.br/" target="_blank">Home</a>
+        </div>
+    </header>
+    <main>
+        <form method="post">
+            <div id="info">
+                <h1>Banco de currículos</h1>
+                <p>Preencha os campos corretamente para participar do banco de talentos da JobsNet!</p>
+            </div>
+            <div id="dadosPessoais">
+                <h2>Dados Pessoais</h2>
+                <div class="required">
+                    <label for="nome">Nome Completo</label>
+                    </br>
+                    <input type="text" id="nome" required/>
+                </div>
+                <div >
+                    <label for="cargo">Cargo Pretendido</label>
+                    </br>
+                    <input type="text" id="cargo"/>
+                </div>
+                <div class="required">
+                    <label for="dataDeNascimento">Data de Nascimento</label>
+                    </br>
+                    <input type="date" id="dataDeNascimento" required/>
+                </div>
+                <div>
+                    <label for="estadoCivil">Estado Civil</label>
+                    <select name="Estado Civil" id="estadoCivil">
+                        <option value="selecionar">Selecionar</option>
+                        <option value="Casado(a)">Casado(a)</option>
+                        <option value="Solteiro(a)">Solteiro(a)</option>
+                        <option value="Viuvo(a)">Viúvo(a)</option>
+                        <option value="Divorciado(a)">Divorciado(a)</option>
+                    </select>
+                    <label for="genero">Gênero</label>
+                    <select name="Gênero" id="genero">
+                        <option value="selecionar">Selecionar</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                        <option value="prefironaodizer">Prefiro não dizer</option>
+                    </select>
+                </div>
+            </div>    
+            <div id="contato">
+                <h2>Contato</h2>
+                <div class="required">
+                    <label for="email">E-mail</label>
+                    </br>
+                    <input type="email" id="email" placeholder="examplo@email.com" required/>
+                </div>
+                <div>
+                    <label for="telefone">Telefone</label>
+                    </br>
+                    <input type="tel" id="telefone" placeholder="(xx) xxxx-xxxx">
+                </div>
+                <div>
+                    <label for="celular">Celular</label>
+                    </br>
+                    <input type="tel" id="celular" placeholder="(xx) xxxxx-xxxx" >
+                </div>
+            </div>
+            <div id="enderecos">
+                <h2>Endereço</h2>
+                <div class="required">
+                    <label for="rua">Rua</label>
+                    </br>
+                    <input type="text" id="rua" required placeholder="Nome da rua">
+                </div>
+                <div class="required">
+                    <label for="numero">Número</label>
+                    </br>
+                    <input type="number" id="numero" required>
+                </div>
+                <div class="required">
+                    <label for="bairro">Bairro</label>
+                    </br>
+                    <input type="text" id="bairro" required> 
+                </div>
+                <div>
+                    <label for="complemento">Complemento</label>
+                    </br>
+                    <input type="text" id="complemento" placeholder="bloco, apto">
+                </div>
+                <div class="required">
+                    <label for="cidade">Cidade</label>
+                    </br>
+                    <input type="text" id="cidade" required>
+                </div>
+                <div class="required">
+                    <label for="estado">Estado</label>
+                    </br>
+                    <input type="text" id="estado" required>
+                </div>
+                <div class = "required" id="errCep">
+                    <label for="cep">CEP</label>
+                    </br>
+                    <input type="number" name="cep"  id = "cep" size="8" required placeholder="apenas números">
+                    <span id="invCEP" style="display: none;" role="alert">CEP inválido!</span>
+                </div>    
+            </div>
+            <div id="documentos">
+                <h2>Documentos</h2>
+                <div class="required">
+                    <label for="rg">RG</label>
+                    </br>
+                    <input type="text" id="rg" required placeholder="apenas números">
+                </div>
+                <div id = "errCpf" class="required">
+                    <label for="cpf">CPF</label>
+                    </br>
+                    <input type="text" id="cpf" required size = "11" placeholder="apenas números">
+                    <span id="invCPF" style="display: none;" role="alert">CPF inválido!</span>
+                </div>
+                <div>
+                    <label for="habilitacao">Possui habilitação?</label>
+                    <select name="habilitacao" id="habilitacao">
+                        <option value="selecionar">Selecionar</Sect></option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                        <option value="e">E</option>
+                        <option value="nãopossui">Não possui</option>
+                    </select>
+                    <label for="veiculo">Possui veículo?</label>
+                    <select name="veiculo'" id="veiculo">
+                        <option value="selecionar">Selecionar</Sect></option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
+            </div>
+            <div id="button">
+                <button type="submit" onclick="formValid">Enviar!</button>
+            </div>  
+        </form>
+    </main>
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    <a href="http://github.com/geovannasiqueira" target="_blank" id="git">GitHub</a>
+                </li>
+                <li>
+                    <a href="mailto:geovanna.carolline.gcs@gmail.com" target="_blank" id="mail">E-mail</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/geovannacarolline/" id="in">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+        <h9>Formulário idealizado por Geovanna Carolline Siqueira</h5>
+    </footer>
+</body>
+<script src="./js/script.js"></script>
+</html>
