@@ -165,6 +165,6 @@ function formValid() {
         email.length < 4 || rg == "" || validacaoCPF() == false) {
         alert('Por favor, preencha todos os campos corretamente.');
     } else {
-        criarusuario();
+        criarUsuario();
     }
 }
