@@ -44,6 +44,7 @@ form {
 
 #info {
     border: 5px solid #82029d;
+    border-radius: 5px 5px 5px 5px;
     padding: 10px;
     margin: 10px;
     background-color: #eee6ed99;
@@ -51,6 +52,7 @@ form {
 
 #dadosPessoais {
     border: 5px solid #f89d03;
+    border-radius: 5px 5px 5px 5px;
     padding: 10px;
     margin: 10px;
     background-color: #eee6ed99;
@@ -79,6 +81,7 @@ label {
 
 #contato {
     border: 5px solid #f89d03;
+    border-radius: 5px 5px 5px 5px;
     padding: 10px;
     margin: 10px;
     background-color: #eee6ed88;
@@ -95,6 +98,7 @@ label {
 
 #enderecos {
     border: 5px solid #f89d03;
+    border-radius: 5px 5px 5px 5px;
     padding: 10px;
     margin: 10px;
     background-color: #eee6ed88;
@@ -120,6 +124,7 @@ label {
 
 #documentos {
     border: 5px solid #f89d03;
+    border-radius: 5px 5px 5px 5px;
     padding: 10px;
     margin: 10px;
     background-color: #eee6ed88;

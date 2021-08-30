@@ -95,3 +95,76 @@ const LimpaEndereco = () => {
     document.getElementById('estado').value = "";
 }
 
+const FormGama = () => {
+    let form = {
+        nome: document.getElementById('nome').value,
+        cargo: document.getElementById('cargo').value,
+        dataDeNascimento: document.getElementById('dataDeNascimento'),
+        estadoCivil: document.getElementById('estadoCivil').value,
+        genero: document.getElementById('genero').value,
+        email: document.getElementById('email').value,
+        telefone: document.getElementById('telefone').value,
+        celular: document.getElementById('celular').value,
+        rua: document.getElementById('rua').value,
+        numero: document.getElementById('numero').value,
+        bairro: document.getElementById('bairro').value,
+        complemento: document.getElementById('complemento'),
+        cidade: document.getElementById('cidade').value,
+        estado: document.getElementById('estado').value,
+        cep: document.getElementById('cep').value,
+        rg: document.getElementById('identidade').value,
+        cpf: document.getElementById('cpf').value,
+        habilitacao: document.getElementById('habilitacao').value,
+        veiculo: document.getElementById('veiculo').value
+    };
+    console.log(form);
+    return form
+}
+const criarUsuario = async (User) => {
+
+    const requisicao = await fetch('https://back-formgama.herokuapp.com/docs', {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(FormGama())
+    });
+    if (requisicao.status === 200) {
+        alert('Cadastrato efetuado com sucesso!');
+    }
+
+    if (requisicao.status === 500) {
+        alert('CPF ou EMAIL em uso');
+    }
+    location.reload();
+}
+function formValid() {
+    let nome = document.getElementById('nome').value;
+    let cargo = document.getElementById('cargo').value;
+    let dataDeNascimento = document.getElementById('dataDeNascimento');
+    let estadoCivil = document.getElementById('estadoCivil').value;
+    let genero = document.getElementById('genero').value;
+    let email = document.getElementById('email').value;
+    let telefone = document.getElementById('telefone').value;
+    let celular = document.getElementById('celular').value;
+    let rua = document.getElementById('rua').value;
+    let numero = document.getElementById('numero').value;
+    let bairro = document.getElementById('bairro').value;
+    let complemento = document.getElementById('complemento');
+    let cidade = document.getElementById('cidade').value;
+    let estado = document.getElementById('estado').value;
+    let cep = document.getElementById('cep').value;
+    let rg = document.getElementById('identidade').value;
+    let cpf = document.getElementById('cpf').value;
+    let habilitacao = document.getElementById('habilitacao').value;
+    let veiculo = document.getElementById('veiculo').value;
+
+    if (nome == "" || dataDeNascimento == "" || cep == "" || rua == ""
+        || numero == "" || bairro == "" || cidade == "" || estado == "" ||
+        email.length < 4 || rg == "" || validacaoCPF() == false) {
+        alert('Por favor, preencha todos os campos corretamente.');
+    } else {
+        criarusuario();
+    }
+}
